@@ -1,0 +1,30 @@
+{
+  "name": "life",
+  "version": "1.0.0",
+  "description": "game of life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmifflen/Life.git"
+  },
+  "keywords": [
+    "game",
+    "choose",
+    "adventure",
+    "javascript",
+    "life",
+    "node"
+  ],
+  "author": "Luke Mifflen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmifflen/Life/issues"
+  },
+  "homepage": "https://github.com/lmifflen/Life#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
