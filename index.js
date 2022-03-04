@@ -25,6 +25,7 @@ if (hobby === 'bike') {
         if (subject === 'Gym' || subject === 'Physics') {
             console.log(player + "'s" + " favourite subject in school is " + subject);
         }
+        else if (subject !== 'Gym' || subject !== 'Physics')
             console.log(player + ' is a high school drop out');
                    
 }
@@ -39,6 +40,8 @@ if (hobby === 'crafts') {
         if (subject === 'English' || subject === 'Biology') {
             console.log(player + "'s" + " favourite subject in school is " + subject);
         }
+        else if (subject === 'rockstar') {
             console.log(player + ' dropped out of high school to become a rockstar');
+        }
         }
     
