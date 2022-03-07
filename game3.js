@@ -84,18 +84,41 @@ const textNodes = [
         options:  [
             {
                 text: 'Physics',
-                requiredState: (currentState) => currentState.Pads,
+                requiredState: (currentState) => currentState.Bike,
                 setState: { School: true },
                 nextText: 3.1
             },
             {
                 text: 'Gym',
-                requiredState: (currentState) => currentState.Pads,
+                requiredState: (currentState) => currentState.Bike,
                 setState: { School: true },
                 nextText: 3.1
             },
             {   text: 'Schools for fools',
-                requiredState: (currentState) => currentState.Pads,
+                requiredState: (currentState) => currentState.Bike,
+                setState: { dropOut: true },
+                nextText: 3.2
+        }
+        ]
+    },
+    {
+        id: 2.11,
+        text: "Player is a bad ass and doesn't wear protective equipment! What is your favourite subject in school?",
+        options:  [
+            {
+                text: 'Physics',
+                requiredState: (currentState) => currentState.Bike,
+                setState: { School: true },
+                nextText: 3.1
+            },
+            {
+                text: 'Gym',
+                requiredState: (currentState) => currentState.Bike,
+                setState: { School: true },
+                nextText: 3.1
+            },
+            {   text: 'Schools for fools',
+                requiredState: (currentState) => currentState.Bike,
                 setState: { dropOut: true },
                 nextText: 3.2
         }
