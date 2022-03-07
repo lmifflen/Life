@@ -154,13 +154,13 @@ const textNodes = [
             {
                 text: 'English',
                 requiredState: (currentState) => currentState.Crafts,
-                setState: { Physics: true },
+                setState: { School: true },
                 nextText: 3.1
             },
             {
                 text: 'Biology',
                 requiredState: (currentState) => currentState.Crafts,
-                setState: { Gym: true },
+                setState: { School: true },
                 nextText: 3.1
             },
             {   text: "I'm going to drop out and become a rockstar",
@@ -169,7 +169,118 @@ const textNodes = [
                 nextText: 3.2
         }
         ]
-    }
+    },
+    {
+        id: 3.1,
+        text: 'Congratulations! You have finished high school! What will you do now??',
+        options:  [
+            {
+                text: 'Get at job',
+                requiredState: (currentState) => currentState.School,
+                setState: { Job: true },
+                nextText: 4.2
+            },
+            {
+                text: 'Go to college',
+                requiredState: (currentState) => currentState.School,
+                setState: { College: true },
+                nextText: 4.1
+            
+            
+        }
+        ]
+    },
+    {
+    id: 3.2,
+        text: 'High school sucked. You dropped out. What are you going to do now?',
+        options:  [
+            {
+                text: 'Get a job',
+                requiredState: (currentState) => currentState.dropOut,
+                setState: { Job: true },
+                nextText: 4.2
+            },
+            {
+                text: 'Have kids',
+                requiredState: (currentState) => currentState.dropOut,
+                setState: { Kids: true },
+                nextText: 4.3
+            },
+            {
+                text: 'Become a rockstar',
+                requiredState: (currentState) => currentState.dropOut,
+                setState: { Job: true, Rockstar: true },
+                nextText: 4.2
+            
+            
+        }
+        ]
+    },
+    {
+        id: 4.1,
+            text: "You've finished college. Time to grow up.",
+            options:  [
+                {
+                    text: 'Time to have kids',
+                    requiredState: (currentState) => currentState.Job,
+                    setState: { Kids: true },
+                    nextText: 4.3
+                },
+                {
+                    text: 'Get a job',
+                    requiredState: (currentState) => currentState.Job,
+                    setState: { Dink: true },
+                    nextText: 4.2               
+                
+                
+        }
+        ]
+    },
+    {
+        id: 4.2,
+            text: "You've been making it rain at your job. Life's good. What now?",
+            options:  [
+                {
+                    text: 'Time to have kids',
+                    requiredState: (currentState) => currentState.Job,
+                    setState: { Kids: true },
+                    nextText: 4.3
+                },
+                {
+                    text: 'Imma do me',
+                    requiredState: (currentState) => currentState.Job,
+                    setState: { Dink: true },
+                    nextText: 5.1                   
+                
+        }
+        ]
+    },
+    {
+        id: 4.3,
+            text: 'Congratulations! You have wonderful kiddos. They sure take up a lot of time though. You still keeping up with your childhood hobbies?',
+            options:  [
+                {
+                    text: 'Yes',
+                    requiredState: (currentState) => currentState.Kids,
+                    setState: { Hobby: true },
+                    nextText: 4.2
+                },
+                {
+                    text: 'No',
+                    requiredState: (currentState) => currentState.Kids,
+                    setState: { Hobby: false },
+                    nextText: 4.3
+                },
+                {
+                    text: "Wine o'clock is my hobby",
+                    requiredState: (currentState) => currentState.Kids,
+                    setState: { Wine: true },
+                    nextText: 4.2
+                
+                
+            }
+            ]
+        }
 ]
 
 startGame()
