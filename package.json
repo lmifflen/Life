@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/lmifflen/Life#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
     "readline-sync": "^1.4.10"
   }
 }
